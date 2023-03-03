@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">oBechtBusTracker</string>
+    <string name="bus_tracker_cta">Bus Tracker - CTA</string>
+    <string name="bus">bus</string>
+    <string name="alert">alert</string>
+    <string name="route_66_chicago">Route 66 - Chicago</string>
+    <string name="bus_predictions">bus predictions</string>
+    <string name="stopsbus">stopsBus</string>
+    <string name="how_many_minutes">How many minutes</string>
+    <string name="bus_0000">Bus #0000</string>
+    <string name="eastbound_to_navy_pier">Eastbound to Navy Pier</string>
+    <string name="_00_00_pm">00:00 PM</string>
+    <string name="how_close_to_user">How close to user</string>
+    <string name="address">Address</string>
+
+    <integer name="cache_lifetime">8640</integer>
+    <integer name="cache_lifetime2">86400000</integer>
+    <string name="search_by_route_number_name">Search by route number/name</string>
+    <string name="cta_bus_key">w4VBqvh6XKCUfNphjM9xPcdpC</string>
+
+</resources>

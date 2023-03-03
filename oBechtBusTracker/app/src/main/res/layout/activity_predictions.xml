@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/predictionsCS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/predictionsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/predicitionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/route_66_chicago"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/predictionsToolbar"
+        app:layout_constraintStart_toEndOf="@+id/predictionsBusIcon"
+        app:layout_constraintTop_toTopOf="@+id/predictionsToolbar" />
+
+    <ImageView
+        android:id="@+id/predictionsBusIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/bus_predictions"
+        app:layout_constraintBottom_toBottomOf="@+id/predictionsToolbar"
+        app:layout_constraintStart_toStartOf="@+id/predictionsToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bus_icon" />
+
+    <View
+        android:id="@+id/predictView"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#C93C9C19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predictionsToolbar" />
+
+    <TextView
+        android:id="@+id/predictionsLocationSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chicago and Hudson (Eastbound)"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predictionsToolbar" />
+
+    <TextView
+        android:id="@+id/predictionsTimeSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00:00:00 PM"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predictionsLocationSubTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/predictionsRec"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/predictFrameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predictView" />
+
+    <FrameLayout
+        android:id="@+id/predictFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

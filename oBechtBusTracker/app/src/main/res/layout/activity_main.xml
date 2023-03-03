@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    android:foregroundTint="#6200ED"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mainBusIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/bus"
+        app:layout_constraintBottom_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainToolbar"
+        app:srcCompat="@drawable/bus_icon" />
+
+    <TextView
+        android:id="@+id/mainTiitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/bus_tracker_cta"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintStart_toEndOf="@+id/mainBusIcon"
+        app:layout_constraintTop_toTopOf="@+id/mainToolbar" />
+
+    <ImageView
+        android:id="@+id/mainAlertIcon"
+        android:layout_width="35dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/alert"
+        android:foregroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/mainToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <View
+        android:id="@+id/mainSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar" />
+
+    <ImageView
+        android:id="@+id/mainClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="clearSearch"
+        app:layout_constraintStart_toEndOf="@+id/mainTxtInput"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
+        app:srcCompat="@android:drawable/presence_offline" />
+
+    <TextView
+        android:id="@+id/mainUserAddress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Current Address"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/mainAdFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainRec"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainUserAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainSearchView" />
+
+    <EditText
+        android:id="@+id/mainTxtInput"
+        android:layout_width="341dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="5dp"
+
+        android:backgroundTint="@color/purple_700"
+        android:ems="10"
+        android:hint="@string/search_by_route_number_name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#6200ED"
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="@+id/mainSearchView"
+        app:layout_constraintStart_toStartOf="@+id/mainSearchView"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar" />
+
+    <FrameLayout
+        android:id="@+id/mainAdFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
